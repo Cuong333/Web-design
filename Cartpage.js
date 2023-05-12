@@ -2,27 +2,27 @@
 const PRODUCTS = [
 	{
 	  id: 1,
-	  name: "Product 1",
+	  name: "Ốp loại 1",
 	  price: 100000,
 	},
 	{
 	  id: 2,
-	  name: "Product 2",
+	  name: "Ốp loại 2",
 	  price: 200000,
 	},
 	{
 	  id: 3,
-	  name: "Product 3",
+	  name: "Ốp loại 3",
 	  price: 400000,
 	},
 	{
 	  id: 4,
-	  name: "Product 4",
+	  name: "Ốp loại 4",
 	  price: 300000,
 	},
 	{
 	  id: 5,
-	  name: "Product 5",
+	  name: "Ốp loại 5",
 	  price: 80000,
 	},
   ];
@@ -145,3 +145,23 @@ const PRODUCTS = [
   updateCart();
   const totalPrice = calculateTotalPrice();
   CART_TOTAL_EL.innerHTML = formatPrice(totalPrice);
+
+  const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+const cartItemsList = document.querySelector('#cart-items');
+
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const productId = button.getAttribute('data-product-id');
+    const productPrice = button.getAttribute('data-product-price');
+    const productImage = button.getAttribute('data-product-image');
+    
+    // Tạo một phần tử li mới trong giỏ hàng
+    const cartItem = document.createElement('li');
+    cartItem.innerHTML = `
+      <img src="${productImage}" alt="">
+      <span>Product ID: ${productId}</span>
+      <span>Price: ${productPrice}</span>
+    `;
+    cartItemsList.appendChild(cartItem);
+  });
+});
