@@ -140,128 +140,83 @@
 
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        background-image: url('https://th.bing.com/th/id/OIP.VcFZT0FXz4OXmMB9BXsZBgHaHa?pid=ImgDet&rs=1');
-        background-position: right -1px;
-        background-size: 30% 90%;
-        background-repeat: no-repeat;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-        height: 500;
-
-    }
-    h1 {
-        text-align: center;
-        height: 45px;
-    }
-
-    h2 {
-        margin-top: -10px;
-        color: blue;
-    }
-
-    #cart {
-        border: 1px solid black;
-        padding: 10px;
-        float: left;
-        width: 300px;
-        margin-right: 20px;
-    }
-
-    #products {
-        text-align: center;
-        float: left;
-        width: 500px;
-    }
-
-    .add-to-cart-btn {
-        background-color: green;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .add-to-cart-btn:hover {
-        background-color: darkgreen;
-    }
-
-    #cart-items {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    #cart-items li {
-        justify-self: center;
-        display: inline-block;
-        margin-bottom: 10px;
-        vertical-align: top;
-        margin-right: 10px;
-    }
-    #cart-items li:last-child {
-        margin-right: 0;
-    }
-
-    #cart-items li span {
-        margin-left: 10px;
-    }
-
-    #checkout-btn {
-        display: block;
-        margin-top: 10px;
-        background-color: blue;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-
-    #checkout-btn:hover {
-        background-color: darkblue;
-    }
-
-    #products {
-        margin-top: 20px;
-    }
-
-    .product-list {
-        list-style: none;
-        padding: 0;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .product-list li {
-        display: inline-block;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        width: calc(33% - 10px);
-        /* Thêm độ rộng cho mỗi sản phẩm */
+   * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container-fluid {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        hr {
+            margin: 2rem 0;
+        }
+        #cart {
+            float: left;
+            width: 40%;
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        #cartitems {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .cart-item img {
+            height: 50px;
+            width: auto;
+            margin-right: 1rem;
+        }
+        #products {
+            float: right;
+            width: 55%;
+        }
+        .product-list {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        .product-list li {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        background-color: white;
     }
 
     .product-image {
         width: 100%;
-        padding-bottom: 100%;
+        height: 0;
+        padding-bottom: 75%;
         position: relative;
     }
 
     .product-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        position: absolute;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: #32CD32	;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        margin-top: 1rem;
     }
     </style>
     <script src="cartpage.js"></script>
